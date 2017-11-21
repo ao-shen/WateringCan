@@ -37,10 +37,12 @@ void ABaseCharacter::CalculateHealth(float Delta)
 //Step 2: Implement the CalculateDead function.
 void ABaseCharacter::CalculateDead()
 {
-	if (Health <= 0)
+	if (Health <= 0) {
 		isDead = true;
-	else
+		Health = 0;
+	} else {
 		isDead = false;
+	}
 }
 #if WITH_EDITOR
 //Step 3: Implement the remainder of our helper code, used by the editor when we change values.
