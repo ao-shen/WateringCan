@@ -35,9 +35,9 @@ void ABasePhysicsActor::CalculateWetness(float Delta)
 //Step 2: Implement the CalculateDead function.
 void ABasePhysicsActor::CalculateDead()
 {
-	if (Wetness <= 0) {
+	if (Wetness >= 100) {
 		isDead = true;
-		Wetness = 0;
+		Wetness = 100;
 	} else {
 		isDead = false;
 	}
