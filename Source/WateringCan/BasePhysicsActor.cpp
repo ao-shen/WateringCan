@@ -38,6 +38,8 @@ void ABasePhysicsActor::CalculateDead()
 	if (Wetness >= 100) {
 		isDead = true;
 		Wetness = 100;
+	} else if (Wetness < 0) {
+		Wetness = 0;
 	} else {
 		isDead = false;
 	}
